@@ -13,8 +13,8 @@ URL générale : https://amesul.tv/assets/ (rien ici pour l'instant)
 
 ### SCÈNES
 
-- **Just chatting** : [https://amesul.tv/assets/just-chatting](https://amesul.tv/assets/just-chatting?channel=ettacause)
-- **React** : [https://amesul.tv/assets/react](https://amesul.tv/assets/react?chatbox=1?channel=ettacause)
+- **Just chatting** : [https://amesul.tv/assets/just-chatting?channel=ettacause](https://amesul.tv/assets/just-chatting?channel=ettacause)
+- **React** : [https://amesul.tv/assets/react?chatbox=1?channel=ettacause](https://amesul.tv/assets/react?chatbox=1?channel=ettacause)
 - **Intro** : [https://amesul.tv/assets/waiting?selector=intro](https://amesul.tv/assets/waiting?selector=intro)
 - **Pause** : [https://amesul.tv/assets/waiting?selector=pause](https://amesul.tv/assets/waiting?selector=pause)
 - **Outro** : [https://amesul.tv/assets/waiting?selector=outro](https://amesul.tv/assets/waiting?selector=outro)
