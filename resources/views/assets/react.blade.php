@@ -17,18 +17,20 @@
 
 </head>
 <body class="bg-cover h-[1080px] w-[1920px]">
-<main class="absolute top-8 right-8 h-[588px] w-[400px] overflow-hidden">
-    <div id="main-container"
-         class="h-full w-full px-4 font-bold shadow-xl backdrop-blur-3xl backdrop-brightness-200 bg-black/55">
-        <div id="no-channel" class="hidden h-screen w-screen content-center text-center text-3xl text-primary"></div>
-        <template id="message-template">
-            <article class="chat-container">
-                <h1 class="username-container"></h1>
-                <p class="message-container"></p>
-            </article>
-        </template>
-    </div>
-</main>
+@if($_REQUEST['chatbox'])
+    <main class="absolute top-8 right-8 h-[588px] w-[400px] overflow-hidden">
+        <div id="main-container"
+             class="h-full w-full px-4 font-bold shadow-xl backdrop-blur-3xl backdrop-brightness-200 bg-black/55">
+            <div id="no-channel" class="hidden h-screen w-screen content-center text-center text-3xl text-primary"></div>
+            <template id="message-template">
+                <article class="chat-container">
+                    <h1 class="username-container"></h1>
+                    <p class="message-container"></p>
+                </article>
+            </template>
+        </div>
+    </main>
+@endif
 
 </body>
 
