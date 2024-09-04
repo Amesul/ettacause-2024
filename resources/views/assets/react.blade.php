@@ -10,18 +10,14 @@
     <!-- Scripts -->
     <script src="/storage/assets/tmi.min.js"></script>
     @vite(['resources/css/app.css', 'resources/css/assets.css', 'resources/css/chatbox.css', 'resources/js/app.js'])
-
-    <style>
-
-    </style>
-
 </head>
 <body class="bg-cover h-[1080px] w-[1920px]">
 @if($chatbox)
     <main class="absolute top-8 right-8 h-[588px] w-[400px] overflow-hidden">
         <div id="main-container"
              class="h-full w-full px-4 font-bold shadow-xl backdrop-blur-3xl backdrop-brightness-200 bg-black/55">
-            <div id="no-channel" class="hidden h-screen w-screen content-center text-center text-3xl text-primary"></div>
+            <div id="no-channel"
+                 class="hidden h-screen w-screen content-center text-center text-3xl text-primary"></div>
             <template id="message-template">
                 <article class="chat-container">
                     <h1 class="username-container"></h1>

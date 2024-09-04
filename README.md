@@ -21,6 +21,7 @@ URL générale : https://amesul.tv/assets/ (rien ici pour l'instant)
 
 ### QUERIES
 
-- **cagnotte_perso** : 0 ou 1
+- **cagnotte_perso** : 0 ou 1 (true/false)
+- **chatbox** : 0 ou 1 (true/false)
 - **color** : violet, turquoise, noir, blanc
 - **selector** : intro, outro ou pause
