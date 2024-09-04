@@ -2,7 +2,7 @@
 
 # URL des assets
 
-URL générale : https://amesul.tv/assets/
+URL générale : https://amesul.tv/assets/ (rien ici pour l'instant)
 
 ### OVERLAYS
 
