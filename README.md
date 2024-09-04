@@ -9,8 +9,7 @@ URL générale : https://amesul.tv/assets/
 - **Background** : [https://amesul.tv/assets/background](https://amesul.tv/assets/background)
 - **Bandeau statique** : [https://amesul.tv/assets/bandeau?cagnotte_perso=0](https://amesul.tv/assets/bandeau?cagnotte_perso=0)
 - **Cadre** : [https://amesul.tv/assets/cadre?color=turquoise](https://amesul.tv/assets/cadre?color=turquoise)
-- **Chatbox seule
-  ** : [https://amesul.tv/assets/chatbox?channel=ettacause](https://amesul.tv/assets/chatbox?channel=ettacause)
+- **Chatbox seule** : [https://amesul.tv/assets/chatbox?channel=ettacause](https://amesul.tv/assets/chatbox?channel=ettacause)
 
 ### SCÈNES
 
