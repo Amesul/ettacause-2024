@@ -24,7 +24,7 @@ Route::prefix('assets')->name('assets.')->group(function () {
     Route::get('/chatbox', fn() => view('assets.chatbox'))->name('chatbox');
 
     Route::get('/just-chatting', fn() => view('assets.just-chatting'))->name('just-chatting');
-    Route::get('/react', fn() => view('assets.react'))->name('react');
+    Route::get('/react', fn() => view('assets.react', ['chatbox' => $_REQUEST['chatbox']]))->name('react');
     Route::get('/', fn() => view('assets.waiting', ['selector' => $_REQUEST['selector']]))->name('waiting');
 });
 

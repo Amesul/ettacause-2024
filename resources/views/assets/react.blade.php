@@ -17,7 +17,7 @@
 
 </head>
 <body class="bg-cover h-[1080px] w-[1920px]">
-@if($_REQUEST['chatbox'])
+@if($chatbox)
     <main class="absolute top-8 right-8 h-[588px] w-[400px] overflow-hidden">
         <div id="main-container"
              class="h-full w-full px-4 font-bold shadow-xl backdrop-blur-3xl backdrop-brightness-200 bg-black/55">
