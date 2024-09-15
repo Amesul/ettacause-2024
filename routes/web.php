@@ -14,13 +14,17 @@ Route::get('/goals', [MilestonesController::class, 'create'])->name('goals.creat
 Route::put('/goals/generate', [MilestonesController::class, 'store'])->name('goals.store');
 
 Route::prefix('assets')->name('assets.')->group(function () {
+    Route::get('/tutorials', fn() => view('assets.tutorials.index'))->name('tutorial');
+    Route::get('/tutorials/overlays', fn() => view('assets.tutorials.overlays'))->name('tutorial.overlays');
+    Route::get('/tutorials/slc', fn() => view('assets.tutorials.slc'))->name('tutorials.slc');
+
     Route::patch('/display/streamers', [DisplayController::class, 'streamersUpdate'])->name('streamers.update');
     Route::patch('/display/event', [DisplayController::class, 'eventUpdate'])->name('events.update');
     Route::get('/display', [DisplayController::class, 'index'])->name('display');
 
     Route::get('/background', fn() => view('assets.background'))->name('background');
     Route::get('/bandeau', fn() => view('assets.bandeau', ['cagnotte_perso' => $_REQUEST['cagnotte_perso']]))->name('bandeau');
-    Route::get('/bandeau-full', fn() => view('assets.bandeau'))->name('bandeau-full');
+    Route::get('/bandeau-full', fn() => view('assets.bandeau-full'))->name('bandeau-full');
     Route::get('/cadre', fn() => view('assets.cadre'))->name('cadre');
     Route::get('/chatbox', fn() => view('assets.chatbox'))->name('chatbox');
 

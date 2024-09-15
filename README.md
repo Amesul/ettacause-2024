@@ -2,12 +2,13 @@
 
 # URL des assets
 
-URL générale : https://amesul.tv/assets/ (rien ici pour l'instant)
+Base URL : https://amesul.tv/assets/ (rien ici pour l'instant)
 
 ### OVERLAYS
 
 - **Background** : [https://amesul.tv/assets/background](https://amesul.tv/assets/background)
 - **Bandeau statique** : [https://amesul.tv/assets/bandeau?cagnotte_perso=0](https://amesul.tv/assets/bandeau?cagnotte_perso=0)
+- **Bandeau avec logo complets** : [https://amesul.tv/assets/bandeau-full](https://amesul.tv/assets/bandeau-full)
 - **Cadre** : [https://amesul.tv/assets/cadre?color=turquoise](https://amesul.tv/assets/cadre?color=turquoise)
 - **Chatbox seule** : [https://amesul.tv/assets/chatbox?channel=ettacause](https://amesul.tv/assets/chatbox?channel=ettacause)
 
