@@ -30,7 +30,7 @@
                 Cagnotte perso</p>
             <div
                 class="inline-flex h-full w-full place-items-center justify-center truncate rounded-md border-0 text-3xl text-white shadow-sm ring-2 ring-inset py-1.5 font-staatliches ring-primary">
-                <p class="mt-2 h-fit w-fit">{{ $personal_amount }} €</p>
+                <p class="mt-2 h-fit w-fit"></p>
             </div>
         </div>
         <!-- Cagnotte globale -->
@@ -39,7 +39,7 @@
                 Cagnotte globale</p>
             <div
                 class="inline-flex h-full w-full place-items-center justify-center truncate rounded-md border-0 text-3xl text-white shadow-sm ring-2 ring-inset py-1.5 font-staatliches ring-primary">
-                <p class="mt-2 h-fit w-fit">{{ $global_amount }} €</p>
+                <p class="mt-2 h-fit w-fit"></p>
             </div>
         </div>
     </div>
