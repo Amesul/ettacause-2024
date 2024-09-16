@@ -12,26 +12,26 @@
 </head>
 
 <body class="h-screen w-screen bg-transparent">
-<main class="flex h-screen w-screen flex-col items-center justify-center bg-black/50">
+<main class="flex h-screen w-screen flex-col items-center justify-center">
     @if($selector === 'intro')
-        <section class="mb-20 h-fit rounded-2xl px-12 py-10 text-lime-50">
+        <section class="mb-20 h-fit rounded-2xl px-12 py-10 text-lime-50 drop-shadow-2xl">
             <h2 class="text-9xl mask font-staatliches">Le live va</h2>
             <h2 class="ml-44 text-9xl mask font-staatliches">commencer...</h2>
         </section>
     @elseif($selector === 'pause')
-        <section class="mb-20 h-fit rounded-2xl px-12 py-10 text-lime-50">
+        <section class="mb-20 h-fit rounded-2xl px-12 py-10 text-lime-50 drop-shadow-2xl">
             <h2 class="text-9xl mask font-staatliches">Je reviens dans</h2>
             <h2 class="ml-96 text-9xl mask font-staatliches">un instant...</h2>
         </section>
     @elseif($selector === 'outro')
-        <section class="mb-10 h-fit rounded-2xl px-12 py-10 text-lime-50">
+        <section class="mb-10 h-fit rounded-2xl px-12 py-10 text-lime-50 drop-shadow-2xl">
             <h2 class="text-9xl mask font-staatliches">Le live est terminé !</h2>
         </section>
     @endif
 
     <section class="flex gap-44">
-        <img class="h-44" src="{{ asset('/storage/images/logo_ETC-full-flat.png') }}">
-        <img class="h-44" src="{{ asset('/storage/images/logo_EAT.png') }}">
+        <img class="h-44 drop-shadow-2xl" src="{{ asset('/storage/images/logo_ETC-full-flat.png') }}">
+        <img class="h-44 drop-shadow-2xl" src="{{ asset('/storage/images/logo_EAT.png') }}">
     </section>
 </main>
 </body>

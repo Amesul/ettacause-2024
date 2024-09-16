@@ -9,7 +9,7 @@
 
     <!-- Scripts -->
     <script src="/storage/assets/tmi.min.js"></script>
-    @vite(['resources/css/app.css', 'resources/css/assets.css', 'resources/css/chatbox.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/css/chatbox.css', 'resources/js/app.js'])
 </head>
 <body class="bg-cover h-[1080px] w-[1920px]">
 @if($chatbox)

@@ -1,0 +1,31 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-B9B_1muJ.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/css/assets.css": {
+    "file": "assets/assets-Zygbe6En.css",
+    "src": "resources/css/assets.css",
+    "isEntry": true
+  },
+  "resources/css/chatbox.css": {
+    "file": "assets/chatbox-B17iGAbC.css",
+    "src": "resources/css/chatbox.css",
+    "isEntry": true
+  },
+  "resources/images/div.png": {
+    "file": "assets/div-C-mAQ8zF.png",
+    "src": "resources/images/div.png"
+  },
+  "resources/images/hero.png": {
+    "file": "assets/hero-CYTW2CBG.png",
+    "src": "resources/images/hero.png"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-DCrXoRMQ.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  }
+}
