@@ -19,12 +19,23 @@ Route::prefix('assets')->name('assets.')->group(function () {
     Route::get('/display', [DisplayController::class, 'index'])->name('display');
 
     Route::get('/background', fn() => view('assets.background'))->name('background');
-    Route::get('/bandeau', fn() => view('assets.bandeau', ['cagnotte_perso' => $_REQUEST['cagnotte_perso']]))->name('bandeau');
-    Route::get('/bandeau-full', fn() => view('assets.bandeau-full'))->name('bandeau-full');
-    Route::get('/cadre', fn() => view('assets.cadre'))->name('cadre');
-    Route::get('/chatbox', fn() => view('assets.chatbox'))->name('chatbox');
 
-    Route::get('/waiting', fn() => view('assets.waiting', ['selector' => $_REQUEST['selector']]))->name('waiting');
+    Route::get('/bandeau', fn() => view('assets.bandeau', [
+        'cagnotte_perso' => $_REQUEST['cagnotte_perso']]))->name('bandeau');
+    Route::get('/bandeau-full', fn() => view('assets.bandeau-full'))->name('bandeau-full');
+
+    Route::get('/cadre', fn() => view('assets.cadre', [
+        'color' => $_REQUEST['color']
+    ]))->name('cadre');
+
+    Route::get('/chatbox', fn() => view('assets.chatbox', [
+        'channel' => $_REQUEST['channel'],
+        'background' => $_REQUEST['background']
+    ]))->name('chatbox');
+
+    Route::get('/waiting', fn() => view('assets.waiting', [
+        'selector' => $_REQUEST['selector']
+    ]))->name('waiting');
 });
 
 Route::middleware('auth')->group(function () {
