@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Just Chatting</title>
+    <title>Chatbox</title>
 
     <!-- Scripts -->
     <script src="/storage/assets/tmi.min.js"></script>
@@ -15,7 +15,7 @@
 <body class="h-screen w-screen overflow-hidden bg-transparent">
 
 <main id="main-container"
-      class="h-full w-full">
+      class="h-full w-full {{ $background ? 'bg-black/65 shadow-xl px-10' : '' }}">
     <div id="no-channel" class="hidden h-screen w-screen content-center text-center text-3xl text-primary"></div>
     <template id="message-template">
         <article class="chat-container">
@@ -28,7 +28,7 @@
 </body>
 
 <script>
-    const channel = "{{ $_REQUEST['channel'] ?? null }}";
+    const channel = "{{ $channel ?? null }}";
     const template = document.querySelector('#message-template');
 
     if (!channel) {
