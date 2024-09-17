@@ -1,16 +1,11 @@
-@php
-    $personal_amount = random_int(12_000, 150_000);
-    $global_amount = random_int(1_000_000, 5_000_000);
-@endphp
-
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Waiting</title>
+    <title>Bandeau (logos complets)</title>
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
