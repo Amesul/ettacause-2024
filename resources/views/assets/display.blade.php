@@ -13,10 +13,10 @@
     <title>Display</title>
 
     <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/css/assets.css'])
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="overflow-hidden antialiased w-[1920px] h-[1080px]">
+<body class="overflow-hidden bg-transparent antialiased w-[1920px] h-[1080px]">
 
 <main class="flex h-full flex-col justify-between bg-black/50 pt-10">
     @include('assets.partials.streamers')
