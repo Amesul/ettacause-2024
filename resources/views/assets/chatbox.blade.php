@@ -12,10 +12,10 @@
     @vite(['resources/css/app.css', 'resources/css/chatbox.css', 'resources/js/app.js'])
 
 </head>
-<body class="bg-transparent h-screen w-screen">
+<body class="h-screen w-screen overflow-hidden bg-transparent">
 
 <main id="main-container"
-      class="w-full h-full">
+      class="h-full w-full">
     <div id="no-channel" class="hidden h-screen w-screen content-center text-center text-3xl text-primary"></div>
     <template id="message-template">
         <article class="chat-container">

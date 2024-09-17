@@ -7,11 +7,10 @@
 
     <title>Background</title>
 
-    <!-- Scripts -->
-    @vite(['resources/css/assets.css', 'resources/css/app.css'])
+    @vite('')
 </head>
 
-<body class="h-screen w-screen bg-cover">
+<body class="h-screen w-screen overflow-hidden bg-cover">
 </body>
 
 </html>

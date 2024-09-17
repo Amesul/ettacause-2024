@@ -3,7 +3,7 @@
     $global_amount = random_int(1_000_000, 5_000_000);
 @endphp
 
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
@@ -16,7 +16,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="h-screen w-screen bg-transparent">
+<body class="h-screen w-screen overflow-hidden bg-transparent">
 <main
     class="absolute bottom-0 left-0 flex h-28 w-full justify-between border-t-4 px-8 bg-gray-950 border-secondary">
     <div class="flex items-center gap-8">

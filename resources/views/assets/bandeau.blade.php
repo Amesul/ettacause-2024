@@ -16,7 +16,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="h-screen w-screen bg-none">
+<body class="h-screen w-screen overflow-hidden bg-none">
 <main class="absolute bottom-0 left-0 flex h-28 w-full justify-between border-t-4 px-8 bg-gray-950 border-secondary">
     <div class="flex h-28 items-center gap-8">
         <img class="h-20" src="{{ asset('/storage/images/logo_ETC-full-flat.png') }}">

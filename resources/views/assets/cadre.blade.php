@@ -12,16 +12,16 @@
 
 </head>
 
-<body class="h-screen w-screen bg-none">
+<body class="h-screen w-screen overflow-hidden bg-none">
 
-@if($_REQUEST['color'] === 'secondary')
-    <div class="h-full w-full border-4 border-secondary block"></div>
+@if($_REQUEST['color'] === 'secondaryl')
+    <div class="block h-full w-full border-4 border-secondary"></div>
 @elseif($_REQUEST['color'] === 'violet')
-    <div class="h-full w-full border-4 border-primary block"></div>
+    <div class="block h-full w-full border-4 border-primary"></div>
 @elseif($_REQUEST['color'] === 'blanc')
-    <div class="h-full w-full border-4 border-stone-100 block"></div>
+    <div class="block h-full w-full border-4 border-stone-100"></div>
 @elseif($_REQUEST['color'] === 'noir')
-    <div class="h-full w-full border-4 border-stone-950 block"></div>
+    <div class="block h-full w-full border-4 border-stone-950"></div>
 @endif
 
 </body>

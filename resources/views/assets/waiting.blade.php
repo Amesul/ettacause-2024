@@ -11,7 +11,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="h-screen w-screen bg-transparent">
+<body class="h-screen w-screen overflow-hidden bg-transparent">
 <main class="flex h-screen w-screen flex-col items-center justify-center">
     @if($selector === 'intro')
         <section class="mb-20 h-fit rounded-2xl px-12 py-10 text-lime-50 drop-shadow-2xl">
