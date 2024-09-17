@@ -7,10 +7,14 @@
 
     <title>Background</title>
 
-    @vite('')
+    @vite('resources/css/gradient.css')
 </head>
 
-<body class="h-screen w-screen overflow-hidden bg-cover">
+<body class="h-screen w-screen overflow-hidden">
+
+<div id="mesh-gradient" class="elements"></div>
+@vite('resources/js/gradient.js')
+
 </body>
 
 </html>
