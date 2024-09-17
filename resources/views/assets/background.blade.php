@@ -12,7 +12,7 @@
 
 <body class="h-screen w-screen overflow-hidden">
 
-<div id="mesh-gradient" class="elements"></div>
+<main id="mesh-gradient" class="elements"></main>
 @vite('resources/js/gradient.js')
 
 </body>
