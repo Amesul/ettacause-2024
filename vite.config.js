@@ -6,7 +6,8 @@ export default defineConfig({
         laravel({
             input: [
                 'resources/css/app.css',
-                'resources/css/assets.css',
+                'resources/css/gradient.css',
+                'resources/js/gradient.js',
                 'resources/css/chatbox.css',
                 'resources/js/app.js',
                 'resources/images/hero.png',
