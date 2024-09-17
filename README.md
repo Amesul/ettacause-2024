@@ -8,14 +8,11 @@ Base URL : https://amesul.tv/assets/ (rien ici pour l'instant)
 
 - **Background** : [https://amesul.tv/assets/background](https://amesul.tv/assets/background)
 - **Bandeau statique** : [https://amesul.tv/assets/bandeau?cagnotte_perso=0](https://amesul.tv/assets/bandeau?cagnotte_perso=0)
-- **Bandeau avec logo complets** : [https://amesul.tv/assets/bandeau-full](https://amesul.tv/assets/bandeau-full)
+- **Bandeau avec logo complets** (uniquement pour les scènes intro/outro) : [https://amesul.tv/assets/bandeau-full](https://amesul.tv/assets/bandeau-full)
 - **Cadre** : [https://amesul.tv/assets/cadre?color=turquoise](https://amesul.tv/assets/cadre?color=turquoise)
-- **Chatbox seule** : [https://amesul.tv/assets/chatbox?channel=ettacause](https://amesul.tv/assets/chatbox?channel=ettacause)
+- **Chatbox seule** : [https://amesul.tv/assets/chatbox?background=1&channel=ettacause](https://amesul.tv/assets/chatbox?background=1&channel=ettacause)
 
 ### SCÈNES
-
-- **Just chatting** : [https://amesul.tv/assets/just-chatting?channel=ettacause](https://amesul.tv/assets/just-chatting?channel=ettacause)
-- **React** : [https://amesul.tv/assets/react?chatbox=1?channel=ettacause](https://amesul.tv/assets/react?chatbox=1?channel=ettacause)
 - **Intro** : [https://amesul.tv/assets/waiting?selector=intro](https://amesul.tv/assets/waiting?selector=intro)
 - **Pause** : [https://amesul.tv/assets/waiting?selector=pause](https://amesul.tv/assets/waiting?selector=pause)
 - **Outro** : [https://amesul.tv/assets/waiting?selector=outro](https://amesul.tv/assets/waiting?selector=outro)
@@ -23,6 +20,5 @@ Base URL : https://amesul.tv/assets/ (rien ici pour l'instant)
 ### QUERIES
 
 - **cagnotte_perso** : 0 ou 1 (true/false)
-- **chatbox** : 0 ou 1 (true/false)
 - **color** : violet, turquoise, noir, blanc
 - **selector** : intro, outro ou pause
