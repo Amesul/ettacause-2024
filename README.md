@@ -5,7 +5,6 @@
 Base URL : https://amesul.tv/assets/ (rien ici pour l'instant)
 
 ### OVERLAYS
-
 - **Background** : [https://amesul.tv/assets/background](https://amesul.tv/assets/background)
 - **Bandeau statique** : [https://amesul.tv/assets/bandeau?cagnotte_perso=0](https://amesul.tv/assets/bandeau?cagnotte_perso=0)
 - **Bandeau avec logo complets** (uniquement pour les scènes intro/outro) : [https://amesul.tv/assets/bandeau-full](https://amesul.tv/assets/bandeau-full)
@@ -18,7 +17,9 @@ Base URL : https://amesul.tv/assets/ (rien ici pour l'instant)
 - **Outro** : [https://amesul.tv/assets/waiting?selector=outro](https://amesul.tv/assets/waiting?selector=outro)
 
 ### QUERIES
-
 - **cagnotte_perso** : 0 ou 1 (true/false)
 - **color** : violet, turquoise, noir, blanc
 - **selector** : intro, outro ou pause
+
+### AUTRES
+- **GIF pour alert box** : [https://amesul.tv/storage/streamers/alert.gif](https://amesul.tv/storage/streamers/alert.gif)
