@@ -14,13 +14,13 @@
 
 <body class="h-screen w-screen overflow-hidden bg-none">
 
-@if($_REQUEST['color'] === 'secondaryl')
+@if($color === 'turquoise')
     <div class="block h-full w-full border-4 border-secondary"></div>
-@elseif($_REQUEST['color'] === 'violet')
+@elseif($color === 'violet')
     <div class="block h-full w-full border-4 border-primary"></div>
-@elseif($_REQUEST['color'] === 'blanc')
+@elseif($color === 'blanc')
     <div class="block h-full w-full border-4 border-stone-100"></div>
-@elseif($_REQUEST['color'] === 'noir')
+@elseif($color === 'noir')
     <div class="block h-full w-full border-4 border-stone-950"></div>
 @endif
 
