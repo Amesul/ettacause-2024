@@ -14,10 +14,6 @@ Route::get('/goals', [MilestonesController::class, 'create'])->name('goals.creat
 Route::put('/goals/generate', [MilestonesController::class, 'store'])->name('goals.store');
 
 Route::prefix('assets')->name('assets.')->group(function () {
-    Route::get('/tutorials', fn() => view('assets.tutorials.index'))->name('tutorial');
-    Route::get('/tutorials/overlays', fn() => view('assets.tutorials.overlays'))->name('tutorial.overlays');
-    Route::get('/tutorials/slc', fn() => view('assets.tutorials.slc'))->name('tutorials.slc');
-
     Route::patch('/display/streamers', [DisplayController::class, 'streamersUpdate'])->name('streamers.update');
     Route::patch('/display/event', [DisplayController::class, 'eventUpdate'])->name('events.update');
     Route::get('/display', [DisplayController::class, 'index'])->name('display');
@@ -28,8 +24,6 @@ Route::prefix('assets')->name('assets.')->group(function () {
     Route::get('/cadre', fn() => view('assets.cadre'))->name('cadre');
     Route::get('/chatbox', fn() => view('assets.chatbox'))->name('chatbox');
 
-    Route::get('/just-chatting', fn() => view('assets.just-chatting'))->name('just-chatting');
-    Route::get('/react', fn() => view('assets.react', ['chatbox' => $_REQUEST['chatbox']]))->name('react');
     Route::get('/waiting', fn() => view('assets.waiting', ['selector' => $_REQUEST['selector']]))->name('waiting');
 });
 
