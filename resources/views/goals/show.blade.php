@@ -96,10 +96,11 @@ body {
 }
 
 #goal-current-solo {
-    color: white;
+    color: rgb(247 254 231);
     font-size: 40px;
     position: fixed;
     right: 50%;
+  transform: translateX(50%);
     top: 200px
 }
 
@@ -109,11 +110,9 @@ body {
     height: 35px;
     background: #aaaaaa;
     position: relative;
-    border-radius: 500px;
+    border-radius: 12px 12px 0 0;
     overflow: hidden;
-    -webkit-box-shadow: 0px 0px 10px 1px #aaaaaa;
-    -moz-box-shadow: 0px 0px 10px 1px #aaaaaa;
-    box-shadow: 0px 0px 10px 1px #aaaaaa;
+    border: solid 4px #92ffff;
 }
 
 #bar {
