@@ -11,7 +11,7 @@ return new class extends Migration {
             $table->id();
             $table->string('login');
             $table->string('display_name');
-            $table->string('description');
+            $table->text('description');
             $table->string('profile_image_url');
             $table->string('slc_access_token')->nullable();
             $table->string('title')->nullable();
