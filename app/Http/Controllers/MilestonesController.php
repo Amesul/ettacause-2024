@@ -55,6 +55,10 @@ class MilestonesController extends Controller
 
         $milestones = $data->campaign->milestones;
 
+        if (empty($milestones)) {
+            return back()->with('danger', 'Aucun jalon trouvé.');
+        }
+
         $js_map = "const milestones = new Map([
         [0, ''],
         ";
