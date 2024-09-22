@@ -39,10 +39,12 @@
     </div>
 
     <div class="flex items-center gap-8">
+        <img class="h-20" src="{{ asset('/storage/images/logo_twitchat.png') }}">
+        {{-- <img class="hidden h-20" src="{{ asset('/storage/images/logo_twitchat-full.png') }}"> --}}
         <img class="h-20" src="{{ asset('/storage/images/logo_resonances.png') }}">
-        <img class="hidden h-20" src="{{ asset('/storage/images/logo_resonances-full.png') }}">
+        {{-- <img class="hidden h-20" src="{{ asset('/storage/images/logo_resonances-full.png') }}"> --}}
         <img class="h-20" src="{{ asset('/storage/images/logo_mixtape-records.png') }}">
-        <img class="hidden h-20" src="{{ asset('/storage/images/logo_mixtape-records-full.png') }}">
+        {{-- img class="hidden h-20" src="{{ asset('/storage/images/logo_mixtape-records-full.png') }}"> --}}
         <div class="relative h-20 w-44">
             <div class="absolute right-0 bottom-0 flex h-32 w-full items-center justify-center bg-pink-400">
                 <p class="w-fit text-4xl font-bold text-white font-staatliches">T-shirts</p>
