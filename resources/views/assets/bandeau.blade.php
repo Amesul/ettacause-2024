@@ -30,7 +30,7 @@
                 <p class="absolute left-1/2 inline-block -translate-x-1/2 truncate bg-none px-1 text-2xl font-medium -top-[14px] bg-gray-950 text-primary font-staatliches">
                     Cagnotte perso</p>
                 <div
-                    class="inline-flex h-full w-full place-items-center justify-center truncate rounded-md border-0 text-3xl text-white shadow-sm ring-2 ring-inset py-1.5 font-staatliches ring-primary">
+                    class="inline-flex h-full w-full place-items-center justify-center truncate rounded-md border-0 text-3xl text-stone-100 shadow-sm ring-2 ring-inset py-1.5 font-staatliches ring-primary">
                     <p class="mt-2 h-fit w-fit"></p>
                 </div>
             </div>
@@ -45,10 +45,9 @@
         {{-- <img class="hidden h-20" src="{{ asset('/storage/images/logo_resonances-full.png') }}"> --}}
         <img class="h-20" src="{{ asset('/storage/images/logo_mixtape-records.png') }}">
         {{-- img class="hidden h-20" src="{{ asset('/storage/images/logo_mixtape-records-full.png') }}"> --}}
-        <div class="relative h-20 w-44">
-            <div class="absolute right-0 bottom-0 flex h-32 w-full items-center justify-center bg-pink-400">
-                <p class="w-fit text-4xl font-bold text-white font-staatliches">T-shirts</p>
-            </div>
+        <div class="relative -ml-4 h-20 w-56">
+            <img class="absolute -bottom-24 rotate-6 -skew-x-3 z-10 brightness-110 contrast-125"
+                 src="{{ asset('storage/images/tshirt_V1.png') }}" alt="T-shirt">
         </div>
     </div>
 </main>

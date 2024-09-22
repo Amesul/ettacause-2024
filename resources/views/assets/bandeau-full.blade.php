@@ -38,6 +38,10 @@
                 <p class="mt-2 h-fit w-fit"></p>
             </div>
         </div>
+        <div class="relative -ml-4 h-20 w-56">
+            <img class="absolute -bottom-24 rotate-6 -skew-x-3 z-10 brightness-110 contrast-125"
+                 src="{{ asset('storage/images/tshirt_V1.png') }}" alt="T-shirt">
+        </div>
     </div>
 </main>
 </body>
