@@ -15,13 +15,11 @@
 <main class="flex h-screen w-screen flex-col items-center justify-center">
     @if($selector === 'intro')
         <section class="mb-20 h-fit rounded-2xl px-12 py-10 text-lime-50 drop-shadow-2xl">
-            <h2 class="text-9xl mask font-staatliches">Le live va</h2>
-            <h2 class="ml-44 text-9xl mask font-staatliches">commencer...</h2>
+            <h2 class="text-9xl mask font-staatliches">Le live va commencer...</h2>
         </section>
     @elseif($selector === 'pause')
         <section class="mb-20 h-fit rounded-2xl px-12 py-10 text-lime-50 drop-shadow-2xl">
-            <h2 class="text-9xl mask font-staatliches">Je reviens dans</h2>
-            <h2 class="ml-96 text-9xl mask font-staatliches">un instant...</h2>
+            <h2 class="text-9xl mask font-staatliches">Je reviens dans un instant...</h2>
         </section>
     @elseif($selector === 'outro')
         <section class="mb-10 h-fit rounded-2xl px-12 py-10 text-lime-50 drop-shadow-2xl">
