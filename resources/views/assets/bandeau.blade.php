@@ -39,7 +39,7 @@
     </div>
 
     <div class="flex items-center gap-8">
-        <img class="h-20" src="{{ asset('/storage/images/logo_twitchat.png') }}">
+        <img class="h-20 rounded-lg" src="{{ asset('/storage/images/logo_twitchat.png') }}">
         {{-- <img class="hidden h-20" src="{{ asset('/storage/images/logo_twitchat-full.png') }}"> --}}
         <img class="h-20" src="{{ asset('/storage/images/logo_resonances.png') }}">
         {{-- <img class="hidden h-20" src="{{ asset('/storage/images/logo_resonances-full.png') }}"> --}}

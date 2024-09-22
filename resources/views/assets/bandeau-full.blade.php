@@ -15,9 +15,9 @@
 <main
     class="absolute bottom-0 left-0 flex h-28 w-full justify-between border-t-4 px-8 bg-gray-950 border-secondary">
     <div class="flex items-center gap-8">
-        <img class="h-20" src="{{ asset('/storage/images/logo_twitchat-full.png') }}">
-        <img class="h-20" src="{{ asset('/storage/images/logo_resonances-full.png') }}">
-        <img class="h-20" src="{{ asset('/storage/images/logo_mixtape-records-full.png') }}">
+        <img class="h-16 rounded-lg" src="{{ asset('/storage/images/logo_twitchat-full.png') }}">
+        <img class="h-16" src="{{ asset('/storage/images/logo_resonances-full.png') }}">
+        <img class="h-16" src="{{ asset('/storage/images/logo_mixtape-records-full.png') }}">
     </div>
     <div class="flex h-28 items-center gap-8">
         <!-- Cagnotte globale -->
