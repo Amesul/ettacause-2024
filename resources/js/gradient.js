@@ -16,12 +16,12 @@ let backgroundGradients = [{
 }, {
     pos: {x: 20, y: 80}, col: {h: 262, s: 100, l: 69}, scale: {min: 0.8, max: 1.6}, duration: 17, delay: -7,
 }, {
-    pos: {x: 110, y: 110}, col: {h: 180, s: 80, l: 70}, duration: 9, scale: {min: 0.3, max: 0.9}, delay: -2,
+    pos: {x: 105, y: 105}, col: {h: 180, s: 80, l: 65}, duration: 35, scale: {min: 0.9, max: 1.9}, delay: -17,
 }];
 
 // CSS animations using existing gradients + other points of interest
 let animatedGradients = [{
-    pos: {x: 50, y: 50}, col: {h: 262, s: 100, l: 69}, duration: 22, delay: -7,
+    pos: {x: 40, y: 50}, col: {h: 262, s: 100, l: 69}, scale: {min: 0.5}, duration: 35, delay: -7,
 }, {
     pos: {x: 0, y: 0},
     col: {h: 180, s: 77, l: 50},
@@ -79,7 +79,7 @@ let animatedGradientsCss = animatedGradients.filter(g => true).map((e, index) =>
             width: ${w}%;
             height: ${h}%;
             background: hsla(${e.col.h}, ${e.col.s}%, ${e.col.l}%, ${e.col.a || 1});
-            animation: e_${index} ${e.duration * 1.3 || 10}s ${e.easing || "ease-in-out"} infinite;
+            animation: e_${index} ${e.duration * 0.8 || 10}s ${e.easing || "ease-in-out"} infinite;
             animation-delay: ${e.delay || 0}s;
           }
 

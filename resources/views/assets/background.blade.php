@@ -7,7 +7,7 @@
 
     <title>Background</title>
 
-    @vite('resources/css/gradient.css')
+    @vite(['resources/css/app.css', 'resources/css/gradient.css'])
 </head>
 
 <body class="h-screen w-screen overflow-hidden">
