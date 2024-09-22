@@ -10,8 +10,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', fn() => redirect(route('login')));
 
-Route::get('streamers/goals', [MilestonesController::class, 'create'])->name('goals.create');
-Route::put('streamers/goals/generate', [MilestonesController::class, 'store'])->name('goals.store');
+Route::get('/streamers/goals', [MilestonesController::class, 'create'])->name('goals.create');
+Route::put('/streamers/goals/generate', [MilestonesController::class, 'store'])->name('goals.store');
 
 Route::prefix('assets')->name('assets.')->group(function () {
     Route::patch('/display/streamers', [DisplayController::class, 'streamersUpdate'])->name('streamers.update');
