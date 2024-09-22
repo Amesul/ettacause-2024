@@ -21,20 +21,21 @@ Route::prefix('assets')->name('assets.')->group(function () {
     Route::get('/background', fn() => view('assets.background'))->name('background');
 
     Route::get('/bandeau', fn() => view('assets.bandeau', [
-        'cagnotte_perso' => $_REQUEST['cagnotte_perso']]))->name('bandeau');
+        'cagnotte_perso' => $_REQUEST['cagnotte_perso'] = false,
+    ]))->name('bandeau');
     Route::get('/bandeau-full', fn() => view('assets.bandeau-full'))->name('bandeau-full');
 
     Route::get('/cadre', fn() => view('assets.cadre', [
-        'color' => $_REQUEST['color']
+        'color' => $_REQUEST['color'] = 'turquoise'
     ]))->name('cadre');
 
     Route::get('/chatbox', fn() => view('assets.chatbox', [
-        'channel' => $_REQUEST['channel'],
-        'background' => $_REQUEST['background']
+        'channel' => $_REQUEST['channel'] = '',
+        'background' => $_REQUEST['background'] = false
     ]))->name('chatbox');
 
     Route::get('/waiting', fn() => view('assets.waiting', [
-        'selector' => $_REQUEST['selector']
+        'selector' => $_REQUEST['selector'] = 'intro'
     ]))->name('waiting');
 });
 
