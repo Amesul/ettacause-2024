@@ -51,11 +51,11 @@ class DisplayController extends Controller
                 if (array_key_exists('member_amount_raised', $campaign)) {
                     $amount = $campaign['member_amount_raised'] / 100;
                 }
-                foreach ($campaign['milestones'] as $milestone) {
-                    $milestones[$milestone['amount'] / 100] = $milestone['display_name'];
-                }
-                $closestMilestone = $this->getClosest($amount, array_keys($milestones));
-                $milestone = $milestones[$closestMilestone];
+//                foreach ($campaign['milestones'] as $milestone) {
+//                    $milestones[$milestone['amount'] / 100] = $milestone['display_name'];
+//                }
+//                $closestMilestone = $this->getClosest($amount, array_keys($milestones));
+//                $milestone = $milestones[$closestMilestone];
 //                dd(['next_slc_milestone' => ['milestone' => $milestone, 'amount' => $closestMilestone], 'current_slc_amount' => $amount]);
             }
 

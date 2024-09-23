@@ -9,6 +9,79 @@ use Illuminate\Http\Request;
 
 class MilestonesController extends Controller
 {
+    public function show()
+    {
+        $js = "// JS
+const milestones = new Map([
+        [0, ''],
+        [10000, ''],
+        ]);
+const keys = Array.from(milestones.keys());
+const findClosestMax = function (x, arr) {
+  var indexArr = arr.map(function (k) {
+    return Math.abs(k - x);
+  });
+  var min = Math.min.apply(Math, indexArr);
+  if (arr[indexArr.indexOf(min)] <= x) return arr[indexArr.indexOf(min) + 1];
+  else return arr[indexArr.indexOf(min)];
+};
+
+const findClosestMin = function (x, arr) {
+  var indexArr = arr.map(function (k) {
+    return Math.abs(k - x);
+  });
+  var min = Math.min.apply(Math, indexArr);
+  if (arr[indexArr.indexOf(min)] > x) return arr[indexArr.indexOf(min) - 1];
+  else return arr[indexArr.indexOf(min)];
+};
+
+const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
+
+document.addEventListener('goalLoad', function (obj) {
+  let currentMilestone = findClosestMax(obj.detail.amount.current, keys);
+  let previousMilestone = findClosestMin(obj.detail.amount.current, keys);
+  let percent = (obj.detail.amount.current - previousMilestone) * (100 / (currentMilestone - previousMilestone));
+  $('#goal-total').text(`\${currentMilestone} \${obj.detail.currency}`);
+  $('#goal-current').text(
+      `\${obj.detail.amount.current} \${obj.detail.currency}`
+  );
+  $('#milestone-current').text(`\${milestones.get(currentMilestone)}`);
+  $('#goal-current-solo').text(
+      `\${obj.detail.amount.current} \${obj.detail.currency}`
+  );
+  if (obj.detail.amount.current > 0) {
+      $('#bar').css({
+      opacity: 100,
+    });
+  }
+  $('#bar').css({
+    width: clamp(percent, 0, 100) + '%',
+  });
+});
+
+document.addEventListener('goalEvent', function (obj) {
+    let currentMilestone = findClosestMax(obj.detail.amount.current, keys);
+    let previousMilestone = findClosestMin(obj.detail.amount.current, keys);
+    let percent = (obj.detail.amount.current - previousMilestone) * (100 / (currentMilestone - previousMilestone));
+    $('#goal-total').text(`\${currentMilestone} \${obj.detail.currency}`);
+    $('#goal-current').text(
+    `\${obj.detail.amount.current} \${obj.detail.currency}`
+    );
+    $('#milestone-current').text(`\${milestones.get(currentMilestone)}`);
+    $('#goal-current-solo').text(`\${obj.detail.amount.current} \${obj.detail.currency}`);
+    if (obj.detail.amount.current > 0) {
+    $('#bar').css({
+        opacity: 100,
+    });
+  }
+  $('#bar').css({
+    width: clamp(percent, 0, 100) + '%',
+  });
+});";
+        return view('goals.show', [
+            'js' => $js
+        ]);
+    }
     public function create()
     {
         return view('goals.create');

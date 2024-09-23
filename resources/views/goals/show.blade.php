@@ -27,7 +27,7 @@
 @elseif(Session::has('success'))
     <x-flash type="success">{{ Session::get('success') }}</x-flash>
 @endif
-<div class="min-h-screen bg-black">
+<div class="min-h-screen bg-slate-800">
     <div class="py-10">
         <!-- Page Content -->
         <main class="mx-auto my-8 grid max-w-7xl gap-8 sm:px-6 lg:px-8">

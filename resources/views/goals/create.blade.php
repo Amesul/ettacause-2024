@@ -11,7 +11,8 @@
             <x-input-error :messages="$errors->get('charity-milestones')" class="mt-2"/>
         </div>
 
-        <div class="flex items-center justify-end mt-4">
+        <div class="flex items-center justify-end mt-4 gap-4">
+            <p class="text-sm font-bold underline text-gray-600">Je n'ai pas de DG.</p>
             <x-secondary-button type="submit" class="ml-4">
                 {{ __('Générer') }}
             </x-secondary-button>
