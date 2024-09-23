@@ -68,10 +68,11 @@
     // Liste des textes à afficher
     const commands = [
         'don',
-        'tshirt',
-        'album',
         'eat',
+        'tshirt',
         'etc',
+        'clip',
+        'album',
     ];
 
     const container = document.querySelector('#bot_command_container');
