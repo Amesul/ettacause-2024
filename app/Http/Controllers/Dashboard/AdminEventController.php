@@ -8,7 +8,7 @@ use App\Models\Streamer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
-class EventController extends Controller
+class AdminEventController extends Controller
 {
     public function index()
     {

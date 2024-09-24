@@ -10,7 +10,7 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Http\Request;
 
-class StreamerController extends Controller
+class AdminStreamerController extends Controller
 {
     public function index()
     {
