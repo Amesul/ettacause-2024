@@ -31,7 +31,7 @@
 <div class="flex min-h-screen w-full flex-col items-center bg-cover bg-center pt-6 sm:justify-center sm:pt-0"
      style="background-image: url('{{ Vite::asset('resources/images/hero.png') }}')">
     <div>
-        <a href="{{ route('goals.create') }}">
+        <a href="{{ route('streamers.goals.create') }}">
             <x-application-logo class="h-24 fill-current text-gray-500"/>
         </a>
     </div>
