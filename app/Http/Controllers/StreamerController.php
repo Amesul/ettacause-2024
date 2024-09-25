@@ -22,7 +22,7 @@ class StreamerController extends Controller
             "&force_verify=true" .
             "&client_id=" . config('twitch.client_id') .
             "&redirect_uri=" . route('streamers.twitch-response') .
-            "&scope=channel%3Amanage%3Avips+openid" .
+            "&scope=" . urlencode('channel:manage:vips') . "+openid" .
             "&state=$state"; // Include the state for verification
 
         // Return the view with the authorization URL
@@ -79,12 +79,20 @@ class StreamerController extends Controller
             $twitchInfos = $getUsers->json('data')[0]; // Extract user information from the response
 
             // Create or update the Streamer record in the database with the retrieved user information
-            Streamer::updateOrCreate([
+            $streamer = Streamer::updateOrCreate([
                 'login' => $twitchInfos['login'], // Twitch username
                 'display_name' => $twitchInfos['display_name'], // Twitch username
                 'description' => $twitchInfos['description'], // User description
                 'profile_image_url' => $twitchInfos['profile_image_url'], // URL to the user's profile image
             ]);
+
+            // Check if the $streamer object was just created in the database.
+            if ($streamer->wasRecentlyCreated) {
+                Http::withHeaders([
+                    // Include an Authorization header with an API token.
+                    'Authorization' => config('api.api_token'),
+                ])->post('http://51.91.59.245:3000/api/restart');
+            }
         } else {
             // The request failed
             return redirect(route('streamers.register'))->with('danger', $getUsers->json('message')());
