@@ -9,6 +9,7 @@ use App\Models\Streamer;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class AdminStreamerController extends Controller
 {
@@ -44,7 +45,8 @@ class AdminStreamerController extends Controller
                 if (!empty($decodedRes)) {
                     $user = $decodedRes[0];
 
-                    Streamer::updateOrCreate([
+                    Streamer::updateOrCreate(
+                        ['login' => $user['login']], [
                         'login' => $user['login'],
                         'display_name' => $user['display_name'],
                         'description' => $user['description'],
@@ -56,6 +58,13 @@ class AdminStreamerController extends Controller
                 }
             }
         }
+
+        // Reboot ettonbot
+        Http::withHeaders([
+            // Include an Authorization header with an API token.
+            'Authorization' => config('api.api_token'),
+        ])->post('http://51.91.59.245:3000/api/restart');
+
         return back()->with('success', 'Participant·e ajouté·e.');
     }
 
@@ -73,6 +82,13 @@ class AdminStreamerController extends Controller
     public function destroy(Streamer $streamer)
     {
         $streamer->delete();
+
+        // Reboot ettonbot
+        Http::withHeaders([
+            // Include an Authorization header with an API token.
+            'Authorization' => config('api.api_token'),
+        ])->post('http://51.91.59.245:3000/api/restart');
+
         return back()->with('danger', 'Participant·e supprimé·e.');
     }
 }
