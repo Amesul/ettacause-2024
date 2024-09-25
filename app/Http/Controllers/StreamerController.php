@@ -79,12 +79,14 @@ class StreamerController extends Controller
             $twitchInfos = $getUsers->json('data')[0]; // Extract user information from the response
 
             // Create or update the Streamer record in the database with the retrieved user information
-            $streamer = Streamer::updateOrCreate([
-                'login' => $twitchInfos['login'], // Twitch username
-                'display_name' => $twitchInfos['display_name'], // Twitch username
-                'description' => $twitchInfos['description'], // User description
-                'profile_image_url' => $twitchInfos['profile_image_url'], // URL to the user's profile image
-            ]);
+            $streamer = Streamer::updateOrCreate(
+                ['login' => $twitchInfos['login']],
+                [
+                    'login' => $twitchInfos['login'], // Twitch username
+                    'display_name' => $twitchInfos['display_name'], // Twitch username
+                    'description' => $twitchInfos['description'], // User description
+                    'profile_image_url' => $twitchInfos['profile_image_url'], // URL to the user's profile image
+                ]);
 
             // Check if the $streamer object was just created in the database.
             if ($streamer->wasRecentlyCreated) {
