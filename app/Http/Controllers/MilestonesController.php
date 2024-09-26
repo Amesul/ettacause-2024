@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Streamer;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Http\Request;
@@ -90,7 +89,7 @@ document.addEventListener('goalEvent', function (obj) {
     /**
      * @throws GuzzleException
      */
-    public function store(Request $request)
+    public function generate(Request $request)
     {
         $validated = $request->validate([
             'charity-milestones' => ['required', 'url'],
@@ -100,31 +99,6 @@ document.addEventListener('goalEvent', function (obj) {
         $streamlabs = new Client([]);
         $res = $streamlabs->get('https://streamlabscharity.com/api/v1/widgets/milestones/' . $slc_access_token);
         $data = json_decode($res->getBody());
-
-        $login = $data->user->slug;
-
-        $twitch = new Client([
-            'base_uri' => 'https://api.twitch.tv/helix/',
-            'headers' => [
-                'Authorization' => ' Bearer ' . TwitchAccessToken::get(),
-                'Client-Id' => config('twitch.client_id'),
-            ]
-        ]);
-
-        if ($login) {
-            $res = $twitch->get('users?login=' . trim($login));
-            $user = json_decode($res->getBody()->getContents(), true)['data'][0];
-
-            Streamer::updateOrCreate(
-                ['login' => $user['login']],
-                [
-                    'display_name' => $user['display_name'],
-                    'description' => $user['description'],
-                    'profile_image_url' => $user['profile_image_url'],
-                    'slc_access_token' => $slc_access_token,
-                    'online' => false,
-                ]);
-        }
 
         $milestones = $data->campaign->milestones;
 

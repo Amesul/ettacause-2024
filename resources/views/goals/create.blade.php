@@ -1,5 +1,5 @@
 <x-guest-layout>
-    <form action="{{ route('goals.store') }}" method="post">
+    <form action="{{ route('streamers.goals.generate') }}" method="post">
         @csrf @method('PUT')
         <div class="mt-2">
             Coller ici le lien de vos jalons, récupéré sur Streamlabs Charity.

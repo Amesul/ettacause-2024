@@ -19,7 +19,7 @@ Route::prefix('streamers')->name('streamers.')->group(function () {
     });
 
     Route::get('/goals', [MilestonesController::class, 'create'])->name('goals.create');
-    Route::put('/goals/generate', [MilestonesController::class, 'store'])->name('goals.store');
+    Route::put('/goals/generate', [MilestonesController::class, 'generate'])->name('goals.generate');
     Route::get('/goals/show', [MilestonesController::class, 'show'])->name('goals.show');
 });
 
