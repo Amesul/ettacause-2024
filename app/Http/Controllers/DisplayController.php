@@ -16,10 +16,7 @@ class DisplayController extends Controller
     public function index()
     {
         $this->streamersUpdate();
-        return view('assets.display', [
-            'streamers' => Streamer::orderBy('login')->get(),
-            'event' => Event::firstWhere('date', ">", now()->addHour()),
-        ]);
+        return view('assets.display', ['streamers' => Streamer::orderBy('login')->get(), 'event' => Event::firstWhere('date', ">", now()->addHour()),]);
     }
 
     /**
@@ -35,30 +32,10 @@ class DisplayController extends Controller
             ]
         ]);
 
-        $streamlabs = new Client([
-            'base_uri' => 'https://streamlabscharity.com/api/v1/widgets/milestones/',
-        ]);
-
-        $streamers = Streamer::orderBy('login')->get();
+        $streamers = Streamer::all();
         $query = '';
 
         foreach ($streamers as $streamer) {
-            if ($streamer->slc_access_token) {
-                $milestones = [];
-                $response = json_decode($streamlabs->get($streamer->slc_access_token)->getBody()->getContents(), true);
-                $amount = 0;
-                $campaign = $response['campaign'];
-                if (array_key_exists('member_amount_raised', $campaign)) {
-                    $amount = $campaign['member_amount_raised'] / 100;
-                }
-//                foreach ($campaign['milestones'] as $milestone) {
-//                    $milestones[$milestone['amount'] / 100] = $milestone['display_name'];
-//                }
-//                $closestMilestone = $this->getClosest($amount, array_keys($milestones));
-//                $milestone = $milestones[$closestMilestone];
-//                dd(['next_slc_milestone' => ['milestone' => $milestone, 'amount' => $closestMilestone], 'current_slc_amount' => $amount]);
-            }
-
             $streamer->update(['title' => '', 'online' => false]);
             $query = $query . '&user_login=' . $streamer->login;
         }
