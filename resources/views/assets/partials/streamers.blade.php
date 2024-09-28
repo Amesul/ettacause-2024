@@ -9,7 +9,7 @@
         @foreach($streamers as $streamer)
             @if($streamer->login !== 'ettacause' && $loop->iteration <= 40)
                 <li>
-                    <figure class="h-28 {{ $streamer->online ? '' : 'opacity-55' }}"
+                    <figure class="h-28 {{ $streamer->online ? '' : 'opacity-45' }}"
                             id="{{ $streamer->id }}">
                         <div class="container relative">
                             <img src="{{ $streamer->profile_image_url }}" alt=""
@@ -41,7 +41,7 @@
         @foreach($streamers as $streamer)
             @if($streamer->login !== 'ettacause' && $loop->iteration > 40)
                 <li>
-                    <figure class="h-28 {{ $streamer->online ? '' : 'opacity-55' }}"
+                    <figure class="h-28 {{ $streamer->online ? '' : 'opacity-45' }}"
                             id="{{ $streamer->id }}">
                         <div class="container relative">
                             <img src="{{ $streamer->profile_image_url }}" alt=""
