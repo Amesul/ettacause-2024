@@ -7,6 +7,7 @@ use App\Http\Controllers\Dashboard\FetchImageController;
 use App\Http\Controllers\DisplayController;
 use App\Http\Controllers\MilestonesController;
 use App\Http\Controllers\StreamerController;
+use App\Models\Streamer;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', fn() => redirect(route('login')));
@@ -21,6 +22,8 @@ Route::prefix('streamers')->name('streamers.')->group(function () {
     Route::get('/goals', [MilestonesController::class, 'create'])->name('goals.create');
     Route::put('/goals/generate', [MilestonesController::class, 'generate'])->name('goals.generate');
     Route::get('/goals/show', [MilestonesController::class, 'show'])->name('goals.show');
+
+    Route::get('/list', fn() => view('streamer.list', ['streamers' => Streamer::orderBy('login')->get()]))->name('list');
 });
 
 Route::prefix('assets')->name('assets.')->group(function () {
