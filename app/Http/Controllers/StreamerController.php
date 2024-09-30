@@ -88,12 +88,14 @@ class StreamerController extends Controller
                     'profile_image_url' => $twitchInfos['profile_image_url'], // URL to the user's profile image
                 ]);
 
+
             // Check if the $streamer object was just created in the database.
             if ($streamer->wasRecentlyCreated) {
                 Http::withHeaders([
                     // Include an Authorization header with an API token.
                     'Authorization' => config('api.api_token'),
-                ])->post('http://51.91.59.245:3000/api/restart');
+                ])->withBody("{\"login\": \"{$streamer->login}\"}")
+                    ->post('http://51.91.59.245:3000/api/restart');
             }
         } else {
             // The request failed
