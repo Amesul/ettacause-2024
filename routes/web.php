@@ -34,7 +34,7 @@ Route::prefix('assets')->name('assets.')->group(function () {
     Route::get('/background', fn() => view('assets.background'))->name('background');
 
     Route::get('/bandeau', fn() => view('assets.bandeau', ['cagnotte_perso' => $_REQUEST['cagnotte_perso'] ?? false,]))->name('bandeau');
-    Route::get('/bandeau-full', fn() => view('assets.bandeau-full'))->name('bandeau-full');
+    Route::get('/bandeau-full', fn() => view('assets.bandeau-full', ['cagnotte_perso' => $_REQUEST['cagnotte_perso'] ?? true]))->name('bandeau-full');
 
     Route::get('/cadre', fn() => view('assets.cadre', ['color' => $_REQUEST['color'] ?? 'turquoise']))->name('cadre');
 

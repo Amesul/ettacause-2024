@@ -29,15 +29,17 @@
                 <p class="mt-2 h-fit w-fit"></p>
             </div>
         </div>
-        <!-- Cagnotte globale -->
-        <div class="relative h-16 w-56">
-            <p class="absolute left-1/2 inline-block -translate-x-1/2 truncate bg-none px-1 text-2xl font-medium -top-[14px] bg-slate-950 text-primary font-staatliches">
-                Cagnotte perso</p>
-            <div
-                class="inline-flex h-full w-full place-items-center justify-center truncate rounded-md border-0 text-3xl text-white shadow-sm ring-2 ring-inset py-1.5 font-staatliches ring-primary">
-                <p class="mt-2 h-fit w-fit"></p>
+        @if($cagnotte_perso)
+            <!-- Cagnotte globale -->
+            <div class="relative h-16 w-56">
+                <p class="absolute left-1/2 inline-block -translate-x-1/2 truncate bg-none px-1 text-2xl font-medium -top-[14px] bg-slate-950 text-primary font-staatliches">
+                    Cagnotte perso</p>
+                <div
+                    class="inline-flex h-full w-full place-items-center justify-center truncate rounded-md border-0 text-3xl text-white shadow-sm ring-2 ring-inset py-1.5 font-staatliches ring-primary">
+                    <p class="mt-2 h-fit w-fit"></p>
+                </div>
             </div>
-        </div>
+        @endif
         <div class="relative -ml-4 h-20 w-56">
             <img class="absolute -bottom-24 rotate-6 -skew-x-3 z-10 brightness-110 contrast-125"
                  src="{{ asset('storage/images/tshirt_V1.png') }}" alt="T-shirt">
