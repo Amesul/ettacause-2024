@@ -6,7 +6,7 @@
                 Prochaine émission : {{ $event->title }}
             </h2>
         </header>
-        <p class="font-black text-primary mb-2">{{ ucfirst($event->date->addHours(-1)->diffForHumans()) }}</p>
+        <p class="font-black text-primary mb-2">{{ ucfirst($event->date->addHours(-2)->diffForHumans()) }}</p>
         <p class="line-clamp-2 text-stone-100 font-medium">{{ $event->description }}</p>
     </div>
 </section>
